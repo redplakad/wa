@@ -5,7 +5,7 @@
         @csrf
         <input type="hidden" name="type" value="button">
         {{-- <div class="col-md-12"> --}}
-            <label for="textmessage" class="form-label">Sender</label>
+            <label for="textmessage" class="form-label">Pengirim</label>
             <select name="sender" id="sender" class="form-control" style="width: 100%;" required>
                @foreach ($numbers as $number)
                <option value="{{$number->body}}">{{$number->body}}</option>
@@ -29,7 +29,7 @@
                 </div> --}}
                 <div>
                     <div class="tagsOption ">
-                        <label for="inputEmail4" class="form-label">Tag Lists</label>
+                        <label for="inputEmail4" class="form-label">Daftar Tag</label>
                         <select name="tag" id="tag" class="form-control" style="width: 100%; height:200px;" required>
                           @foreach ($tags as $tag)
                               
@@ -44,18 +44,17 @@
                             <input type="number" id="delay" min="1" max="60" name="delay" class="form-control">
                         </div>
                         <div class="col mx-2">
-                            <label for="tipe" class="form-label">Type</label>
+                            <label for="tipe" class="form-label">Jenis</label>
                             <select name="tipe" id="tipe" class="form-control" style="width: 100%; height:200px;">
-                               <option value="immediately">Immediately</option>
-                               <option value="schedule">Schedule</option>
-                                 
+                               <option value="immediately">Langsung Kirim</option>
+                               <option value="schedule">Terjadwal</option>
                               </select>
                         </div>
                         
                     </div>
                     <div class="col d-none" id="datetime">
                 
-                        <label for="datetime" class="form-label">Date Time</label>
+                        <label for="datetime" class="form-label">Waktu</label>
                         <input type="datetime-local" id="datetime2"  name="datetime" class="form-control">
                     </div>
                   
@@ -94,14 +93,14 @@
     
             </div>
             <div class="col-md-5 mx-2">
-                <label for="inputPassword4" class="form-label">Message</label>
+                <label for="inputPassword4" class="form-label">Pesan</label>
                 <textarea name="message" id="message" cols="30" rows="10" class="form-control">This is your message,, use {name} to get a name.</textarea>
             </div>
          
         </div>
 
         <div class="mt-2" id="buttonblast">
-            <button type="submit" id="buttonStartBlast" name="submit" class="btn btn-primary">Start Blast</button>
+            <button type="submit" id="buttonStartBlast" name="submit" class="btn btn-primary">Mulai Blast</button>
         </div>
     </form>
 </div>
@@ -158,7 +157,7 @@
 
        
         $('#buttonStartBlast').html(`<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-                                                Prossess Blasting...`)
+                                                Proses Blast...`)
        $.ajax({
            method : 'POST',
            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},

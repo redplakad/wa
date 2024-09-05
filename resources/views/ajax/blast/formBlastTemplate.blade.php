@@ -5,7 +5,7 @@
         @csrf
         <input type="hidden" name="type" value="button">
         {{-- <div class="col-md-12"> --}}
-            <label for="textmessage" class="form-label">Sender</label>
+            <label for="textmessage" class="form-label">Pengirim</label>
             <select name="sender" id="sender" class="form-control" style="width: 100%;" required>
                @foreach ($numbers as $number)
                <option value="{{$number->body}}">{{$number->body}}</option>
@@ -19,7 +19,7 @@
                 
                 <div>
                     <div class="tagsOption ">
-                        <label for="inputEmail4" class="form-label">Tag Lists</label>
+                        <label for="inputEmail4" class="form-label">Daftar Tag</label>
                         <select name="tag" id="tag" class="form-control" style="width: 100%; height:200px;" required>
                           @foreach ($tags as $tag)
                               
@@ -36,8 +36,8 @@
                         <div class="col mx-2">
                             <label for="tipe" class="form-label">Type</label>
                             <select name="tipe" id="tipe" class="form-control" style="width: 100%; height:200px;">
-                               <option value="immediately">Immediately</option>
-                               <option value="schedule">Schedule</option>
+                               <option value="immediately">Langsung Kirim</option>
+                               <option value="schedule">Terjadwal</option>
                                  
                               </select>
                         </div>
@@ -45,7 +45,7 @@
                     </div>
                     <div class="col d-none" id="datetime">
                 
-                        <label for="datetime" class="form-label">Date Time</label>
+                        <label for="datetime" class="form-label">Waktu</label>
                         <input type="datetime-local" id="datetime2"  name="datetime" class="form-control">
                     </div>
                 </div>
@@ -64,21 +64,21 @@
                
              
 
-                <span class="text-danger">example Button link : <span class="badge badge-secondary">url|Visit me|https://m-pedia.id</span> <br> example Call button : <span class="badge badge-secondary">call|Call me|6282298859671</span>  <br> The type only have two options, call and url!</span>
+                <span class="text-danger">example Button link : <span class="badge badge-secondary">url|Visit me|https://bprserang.com</span> <br> example Call button : <span class="badge badge-secondary">call|Call me|6282234567890</span>  <br> The type only have two options, call and url!</span>
 <br>
                 <label for="footer" class="form-label">Footer Message</label>
                 <input type="text" name="footer" id="footer" class="form-control">
     
             </div>
             <div class="col-md-5 mx-2">
-                <label for="inputPassword4" class="form-label">Message</label>
+                <label for="inputPassword4" class="form-label">Pesan</label>
                 <textarea name="message" id="message" cols="30" rows="10" class="form-control">This is your message,, use {name} to get a name.</textarea>
             </div>
          
         </div>
 
         <div class="mt-2" id="buttonblast">
-            <button type="submit" id="buttonStartBlast" name="submit" class="btn btn-primary">Start Blast</button>
+            <button type="submit" id="buttonStartBlast" name="submit" class="btn btn-primary">Mulai Blast</button>
         </div>
     </form>
 </div>

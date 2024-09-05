@@ -6,7 +6,7 @@
         @csrf
         <input type="hidden" name="type" value="text">
         {{-- <div class="col-md-12"> --}}
-            <label for="textmessage" class="form-label">Sender</label>
+            <label for="textmessage" class="form-label">Pengirim</label>
             <select name="sender" id="sender" class="form-control" style="width: 100%;" required>
                @foreach ($numbers as $number)
                <option value="{{$number->body}}">{{$number->body}}</option>
@@ -31,7 +31,7 @@
                 <div>
 
                     <div class="tagsOption ">
-                        <label for="inputEmail4" class="form-label">Tag Lists</label>
+                        <label for="inputEmail4" class="form-label">Daftar Tag</label>
                         <select name="tag" id="tag" class="form-control" style="width: 100%; height:200px;" required>
                           @foreach ($tags as $tag)
                               
@@ -45,14 +45,14 @@
                 <div class="col">
                     <label for="tipe" class="form-label">Type</label>
                     <select name="tipe" id="tipe" class="form-control" style="width: 100%; height:200px;">
-                       <option value="immediately">Immediately</option>
-                       <option value="schedule">Schedule</option>
+                       <option value="immediately">Langsung Kirim</option>
+                       <option value="schedule">Terjadwal</option>
                          
                       </select>
                 </div>
                 <div class="col d-none" id="datetime">
             
-                    <label for="datetime" class="form-label">Date Time</label>
+                    <label for="datetime" class="form-label">Waktu</label>
                     <input type="datetime-local" id="datetime2"  name="datetime" class="form-control">
                 </div>
                 </div>
@@ -68,11 +68,11 @@
                         Send by tag
                     </label>
                 </div> --}}
-                <label class="form-label mt-4">Image</label>
+                <label class="form-label mt-4">Gambar</label>
                 <div class="input-group ">
                   <span class="input-group-btn">
                     <a id="image" data-input="thumbnail" data-preview="holder" class="btn btn-success text-white">
-                      <i class="fa fa-picture-o"></i> Choose
+                      <i class="fa fa-picture-o"></i> Pilih
                     </a>
                   </span>
                   <input id="thumbnail" class="form-control imagee"  type="text" name="image" readonly>
@@ -80,14 +80,14 @@
     
             </div>
             <div class="col-md-5 m-4">
-                <label for="inputPassword4" class="form-label">Message</label>
-                <textarea name="message" id="message" cols="30" rows="10" class="form-control">This is your message,, use {name} to get a name.</textarea>
+                <label for="message" class="form-label">Pesan</label>
+                <textarea name="message" id="message" cols="30" rows="10" class="form-control">Ini adalah pesan kamu gunakan {name} untuk mendapatkan nama.</textarea>
             </div>
          
         </div>
 
         <div class="mt-0" id="buttonblast">
-            <button type="submit" id="buttonStartBlast" name="submit" class="btn btn-primary">Start Blast</button>
+            <button type="submit" id="buttonStartBlast" name="submit" class="btn btn-primary">Mulai Blast</button>
         </div>
     </form>
 </div>
@@ -152,7 +152,7 @@
 
       
         $('#buttonStartBlast').html(`<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-                                                Prossess Blasting...`)
+                                                Proses Blast...`)
        $.ajax({
            method : 'POST',
            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},

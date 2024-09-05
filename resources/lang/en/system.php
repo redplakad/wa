@@ -14,14 +14,14 @@ return [
     */
 
     'home' => 'Dashboard',
-    'autoreply' => 'Auto Reply',
-    'contact' => 'Contacts',
-    'contactlist' => 'Lists Contact',
-    'taglist' => 'Lists Tag',
-    'blast' => 'Blast Message',
-    'test' => 'Message Test',
+    'autoreply' => 'Pesan otomatis',
+    'contact' => 'Kontak',
+    'contactlist' => 'Daftar Kontak',
+    'taglist' => 'Daftar Tag',
+    'blast' => 'Pesan Blast',
+    'test' => 'Tes Pesan',
     'restapi' => 'Rest Api',
-    'setting' => 'Settings',
+    'setting' => 'Pengaturan',
    
    
 

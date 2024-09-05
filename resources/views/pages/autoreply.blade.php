@@ -13,7 +13,7 @@
                 <ol class="breadcrumb mb-0 p-0">
                     <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
                     </li>
-                    <li class="breadcrumb-item active" aria-current="page">Auto Reply</li>
+                    <li class="breadcrumb-item active" aria-current="page"Pesan Otomatis</li>
                 </ol>
             </nav>
         </div>
@@ -22,7 +22,7 @@
         <div class="btn-group">
             <button data-bs-toggle="modal" data-bs-target="#addAutoRespond" type="button"
                 class="btn btn-primary btn-sm">
-                <i class="bx bx-plus"></i>New Auto Reply
+                <i class="bx bx-plus"></i>Pesan Otomatis baru
             </button>
 
         </div>
@@ -137,7 +137,7 @@
                             @endforeach
                         @else
                             <tr>
-                                <td colspan="4">Please select device</td>
+                                <td colspan="4">Silahkan pilih device</td>
                             </tr>
                         @endif
 
@@ -176,7 +176,7 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Add Auto Reply</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Tambah Pesan Otomatis</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
