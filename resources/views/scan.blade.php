@@ -1,6 +1,6 @@
 <x-layout-dashboard title="Scan {{ $number->body }}">
 
-    <h4 class="">Whatsapp Account {{ $number->body }}</h4>
+    <h4 class="">Akun Whatsapp : {{ $number->body }}</h4>
 
 
 
@@ -11,7 +11,7 @@
                 <i class="bi bi-info-circle-fill"></i>
             </div>
             <div class="ms-3">
-                <div class="text-info">Dont leave your phone before connencted</div>
+                <div class="text-info">Jangan tutup aplikasi whatsapp mu sebelum terhubung dengan server</div>
             </div>
         </div>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -45,13 +45,13 @@
                                 <div class="statusss text-center">
                                     @if (Auth::user()->is_expired_subscription)
                                         <button class="btn btn-danger   " type="button" disabled>
-                                            Your subscription is expired. Please renew your subscription.
+                                            Layananmu sudah berkakhir.
                                         </button>
                                     @else
                                         <button class="btn btn-primary" type="button" disabled>
                                             <span class="spinner-grow spinner-grow-sm" role="status"
                                                 aria-hidden="true"></span>
-                                           Witing For node server.. 
+                                                Mengunggu koneksi dengan whatsapp API..
                                         </button>
                                     @endif
                                 </div>

@@ -28,7 +28,7 @@
                                         <p class="mb-1">Total Devices</p>
                                         <h4 class="mb-0">{{ $user->devices_count }}</h4>
                                         <p class="mb-0 mt-2 font-13">
-                                            <span>Your limit device : {{ $user->limit_device }}</span>
+                                            <span>Limit Devices Pengguna: {{ $user->limit_device }}</span>
                                         </p>
                                     </div>
                                     <div class="ms-auto widget-icon bg-primary text-white">
@@ -49,7 +49,7 @@
                                         <p class="mb-0 badge bg-success">{{ $user->blasts_success }} Sent </p>
                                         <p class="mb-0 badge bg-danger">{{ $user->blasts_failed }} Fail </p>
                                         <p class="mb-0 mt-2 font-13">
-                                            From {{ $user->campaigns_count }} Campaigns
+                                            Dari {{ $user->campaigns_count }} Campaigns
                                             </span></p>
                                     </div>
                                     <div class="ms-auto widget-icon bg-success text-white">
@@ -64,10 +64,10 @@
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
                                     <div class="">
-                                        <p class="mb-1">Subscription Status</p>
+                                        <p class="mb-1">Status</p>
                                         <h4 class="mb-0">{{ $user->subscription_status }}</h4>
                                         <p class="mb-0 mt-2 font-13"><span>
-                                                Expired : {{ $user->expired_subscription_status }}
+                                                Berakhir : {{ $user->expired_subscription_status }}
                                             </span></p>
                                     </div>
                                     <div class="ms-auto widget-icon bg-orange text-white">
@@ -82,9 +82,9 @@
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
                                     <div class="">
-                                        <p class="mb-1">All Messages Sent</p>
+                                        <p class="mb-1">Semua Pesan Terkirim</p>
                                         <h4 class="mb-0">{{ $user->message_histories_count }}</h4>
-                                        <p class="mb-0 mt-2 font-13"><span>From messages histories</span></p>
+                                        <p class="mb-0 mt-2 font-13"><span>Dari histori pesan</span></p>
                                     </div>
                                     <div class="ms-auto widget-icon bg-info text-white">
                                         <i class="bi bi-chat-left-text"></i>
@@ -99,25 +99,25 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="d-flex align-items-center">
-                            <h5 class="mb-0">Whatsapp Account</h5>
+                            <h5 class="mb-0">Akun Whatsapp</h5>
                             <form class="ms-auto position-relative">
                                 <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
-                                    data-bs-target="#addDevice"><i class="bi bi-plus"></i> Add Device</button>
+                                    data-bs-target="#addDevice"><i class="bi bi-plus"></i> Tambah Device</button>
 
                             </form>
                         </div>
                         <div class="table-responsive mt-3">
                             <table class="table align-middle">
                                 <thead>
-                                    <th>Number</th>
+                                    <th>Nomor</th>
                                     <th>Webhook URL</th>
-                                    <th>Messages Sent</th>
+                                    <th>Pesan Terkirim</th>
                                     <th>status</th>
-                                    <th>Action</th>
+                                    <th>Aksi</th>
                                 </thead>
                                 <tbody>
                                     @if ($numbers->total() == 0)
-                                        <x-no-data colspan="5" text="No Device added yet" />
+                                        <x-no-data colspan="5" text="Belum ada device yang ditambahkan" />
                                     @endif
                                     @foreach ($numbers as $number)
                                         <tr>
@@ -202,22 +202,22 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Add Device</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Tambah Device</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form action="{{ route('addDevice') }}" method="POST">
                         @csrf
-                        <label for="sender" class="form-label">Number</label>
+                        <label for="sender" class="form-label">Nomor Whatsapp</label>
                         <input type="number" name="sender" class="form-control" id="nomor" required>
-                        <p class="text-small text-danger">*Use Country Code ( without + )</p>
+                        <p class="text-small text-danger">Gunakan Kode Negara (contoh 6287780902761) </p>
                         <label for="urlwebhook" class="form-label">Link webhook</label>
                         <input type="text" name="urlwebhook" class="form-control" id="urlwebhook">
-                        <p class="text-small text-danger">*Optional</p>
+                        <p class="text-small text-danger">*Opsional</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button type="submit" name="submit" class="btn btn-primary">Save</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    <button type="submit" name="submit" class="btn btn-primary">Simpan</button>
                     </form>
                 </div>
             </div>

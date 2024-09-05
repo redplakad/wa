@@ -11,7 +11,7 @@
                 <i class="bi bi-info-circle-fill"></i>
             </div>
             <div class="ms-3">
-                <div class="text-info">Dont leave your phone before connencted</div>
+                <div class="text-info">Jangan keluar dari aplikasi Whatsapp di hp kamu sebelum Whatsapp terghubung dengan server.</div>
             </div>
         </div>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -47,7 +47,7 @@
                                         <button class="btn btn-primary" type="button" disabled>
                                             <span class="spinner-grow spinner-grow-sm" role="status"
                                                 aria-hidden="true"></span>
-                                            Witing For node server..
+                                            Mengunggu koneksi dengan whatsapp API..
                                         </button>
                                     @endif
                                 </div>
