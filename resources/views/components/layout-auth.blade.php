@@ -3,15 +3,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="MPWA Multi Device V5.0.0 ,Whatsapp gateway Multi device Beta version">
+    <meta name="description" content="PT BPR SERANG | Whatsapp Gateway API">
     <meta name="csrf-token" content="{{ csrf_token() }}" />
     <meta name="keywords"
-        content="waapi,wa gateway, whatsapp blast, wamp, mpwa, m pedia wa gateway, wa gateway m pedia, ">
-    <meta name="author" content="Ilman Sunanuddin , M pedia">
+        content="waapi,wa gateway, whatsapp blast ">
+    <meta name="author" content="Galih Setiabudi, WA-GATEWAY">
     <!-- The above 6 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>{{ $title }} | MPWA MD version</title>
+    <title>{{ $title }} | PT BPR SERANG</title>
 
     <!-- Styles -->
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" />
