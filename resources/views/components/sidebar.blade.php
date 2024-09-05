@@ -2,7 +2,7 @@
 <div class="app align-content-stretch d-flex flex-wrap">
     <div class="app-sidebar">
         <div class="logo">
-            <a href="{{route('home')}}" class="logo-icon"><span class="logo-text">MPWA</span></a>
+            <a href="{{route('home')}}" class="logo-icon"><span class="logo-text">BANK SERANG</span></a>
             <div class="sidebar-user-switcher user-activity-online">
                 <a href="/">
                     <img src="{{asset('images/avatars/avatar2.png')}}">
