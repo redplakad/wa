@@ -5,7 +5,7 @@
                    <img src="{{ asset('assets/images/logo-icon.png') }}" class="logo-icon" alt="logo icon">
                </div>
                <div>
-                   <h4 class="logo-text">MPWA v7</h4>
+                   <h4 class="logo-text">BPR SERANG</h4>
                </div>
                <div class="toggle-icon ms-auto"> <i class="bi bi-list"></i>
                </div>
@@ -45,14 +45,14 @@
                            {{-- histories icon --}}
                            <i class="bi bi-file-earmark-bar-graph-fill"></i>
                        </div>
-                       <div class="menu-title">Reports</div>
+                       <div class="menu-title">Laporan</div>
                    </a>
                    <ul>
                        <li class="{{ request()->is('campaigns') ? 'active' : '' }}">
-                           <a href="{{ route('campaigns') }}"><i class="bi bi-circle"></i>Campaign / Blast</a>
+                           <a href="{{ route('campaigns') }}"><i class="bi bi-circle"></i>Kampanye / Blast</a>
                        </li>
                        <li class="{{ request()->is('messages.history') ? 'active' : '' }}">
-                           <a href="{{ route('messages.history') }}"><i class="bi bi-circle"></i>Messages History</a>
+                           <a href="{{ route('messages.history') }}"><i class="bi bi-circle"></i>Riwayat Pesan</a>
                        </li>
 
                    </ul>
@@ -66,7 +66,7 @@
                        <a href="{{ route('autoreply') }}">
                            <div class="parent-icon"><i class="bi bi-chat-left-dots-fill"></i>
                            </div>
-                           <div class="menu-title">Auto Reply</div>
+                           <div class="menu-title">Pesan Otomatis</div>
                        </a>
                    </li>
                    {{-- Create campaign --}}
@@ -74,7 +74,7 @@
                        <a class="" href="{{ route('campaign.create') }}">
                            <div class="parent-icon"><i class="bi bi-plus-circle-fill"></i>
                            </div>
-                           <div class="menu-title">Create Campaign</div>
+                           <div class="menu-title">Buat Kampanye/Blast</div>
                        </a>
                    </li>
                    {{-- end create campaign --}}
@@ -83,7 +83,7 @@
                        <a class="" href="{{ route('messagetest') }}">
                            <div class="parent-icon"><i class="bi bi-chat-left-dots-fill"></i>
                            </div>
-                           <div class="menu-title">Test Message</div>
+                           <div class="menu-title">Pesan Text</div>
                        </a>
                    </li>
                    {{-- Message Test --}}
@@ -112,12 +112,12 @@
                        </a>
                        <ul>
                            <li class="{{ request()->is('admin.settings') ? 'active' : '' }}">
-                               <a href="{{ route('admin.settings') }}"><i class="bi bi-circle"></i>Setting Server</a>
+                               <a href="{{ route('admin.settings') }}"><i class="bi bi-circle"></i>Pengaturan Server</a>
                            </li>
                            <li class="{{ request()->is('admin.manage-users') ? 'active' : '' }}">
                                <a href="{{ route('admin.manage-users') }}">
                                    <i class="bi bi-circle"></i>
-                                   Manage User</a>
+                                   Manajemen Pengguna</a>
                            </li>
 
                        </ul>

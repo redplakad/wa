@@ -46,7 +46,7 @@
                     <a href="{{route('rest-api')}}"><i class="material-icons-two-tone">api</i>{{__('system.restapi')}}</a>
                 </li>
                  <li class="{{request()->is('user/change-password') ? 'active-page' : ''}}">
-                    <a href="{{route('changePassword')}}"><i class="material-icons-two-tone">settings</i>Setting</a>
+                    <a href="{{route('changePassword')}}"><i class="material-icons-two-tone">Pengaturan</i>Setting</a>
                 </li>
               
                 {{-- <li class="{{request()->is('schedule') ? 'active-page' : ''}}">

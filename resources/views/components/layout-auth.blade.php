@@ -6,7 +6,7 @@
     <meta name="description" content="PT BPR SERANG | Whatsapp Gateway API">
     <meta name="csrf-token" content="{{ csrf_token() }}" />
     <meta name="keywords"
-        content="waapi,wa gateway, whatsapp blast ">
+        content="waapi,wa gateway, whatsapp blast PT BPR SERANG">
     <meta name="author" content="Galih Setiabudi, WA-GATEWAY">
     <!-- The above 6 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 

@@ -48,7 +48,7 @@
     <div class="card">
         <div class="card-body">
             <div class="d-flex align-items-center">
-                <h5 class="mb-0">Lists auto respond
+                <h5 class="mb-0">Daftar respon otomatis
                     {{ Session::has('selectedDevice') ? 'for ' . Session::get('selectedDevice')['device_body'] : '' }}
                 </h5>
                 <form class="ms-auto position-relative">
@@ -66,16 +66,16 @@
                             <th>Keyword</th>
                             <th>Details</th>
                             <th>Status</th>
-                            <th>Quoted</th>
+                            <th>Mention</th>
                             <th>Type</th>
 
-                            <th>Action</th>
+                            <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
                         @if (Session::has('selectedDevice'))
                             @if ($autoreplies->total() == 0)
-                                <x-no-data colspan="5" text="No Autoreplies added yet" />
+                                <x-no-data colspan="5" text="Belum ada pesan otomatis yang dibuat" />
                             @endif
                             @foreach ($autoreplies as $autoreply)
                                 <tr>
@@ -87,11 +87,11 @@
                                             type="text" name="id" value="{{ $autoreply->keyword }}">
                                     </td>
                                     <td class="py-1">
-                                        <p> Will respond if Keyword <span
+                                        <p> Akan respon jika Keyword <span
                                                 class="badge bg-success">{{ $autoreply['type_keyword'] }}</span></p>
                                         <p>
 
-                                            & when the sender is <span
+                                            & Ketika pengirim adalah  <span
                                                 class="badge bg-warning">{{ $autoreply['reply_when'] }}</span>
                                         </p>
                                     </td>
@@ -182,7 +182,7 @@
                 <div class="modal-body">
                     <form action="" method="POST" enctype="multipart/form-data" id="formautoreply">
                         @csrf
-                        <label for="device" class="form-label">Whatsapp Account</label>
+                        <label for="device" class="form-label">Akun Whatsapp</label>
                         @if (Session::has('selectedDevice'))
                             {{-- hidden device_id --}}
                             <input type="hidden" name="device"
@@ -198,39 +198,39 @@
                         <div class="form-group">
                             <label for="keyword" class="form-label">Type Keyword</label><br>
                             <input type="radio" value="Equal" name="type_keyword" checked class="mr-2"><label
-                                class="form-label">Equal</label>
+                                class="form-label">Sama dengan</label>
                             <input type="radio" value="Contain" name="type_keyword"><label
-                                class="form-label">Contains</label>
+                                class="form-label">Mengandung</label>
                         </div>
                         <div class="form-group">
-                            <label for="keyword" class="form-label">Only reply when sender is </label><br>
+                            <label for="keyword" class="form-label">Hanya balas jika pengirim adalah</label><br>
                             <input type="radio" value="Group" name="reply_when" class="mr-2"><label
                                 class="form-label">Group</label>
                             <input type="radio" value="Personal" name="reply_when"><label
                                 class="form-label">Personal</label>
                             <input type="radio" value="All" checked name="reply_when"><label
-                                class="form-label">All</label>
+                                class="form-label">Semua</label>
                         </div>
                         <label for="keyword" class="form-label">Keyword</label>
                         <input type="text" name="keyword" class="form-control" id="keyword" required>
                         <label for="type" class="form-label">Type Reply</label>
                         <select name="type" id="type" class="js-states form-control" tabindex="-1"
                             required>
-                            <option selected disabled>Select One</option>
-                            <option value="text">Text Message</option>
-                            <option value="media">Media Message</option>
+                            <option selected disabled>Silahkan pilih salah satu</option>
+                            <option value="text">Pesan Text</option>
+                            <option value="media">Pesan Media</option>
                             {{-- <option value="image">Image Message</option> --}}
-                            <option value="list">List Message </option>
-                            <option value="button">Button Message ( Deprecated )</option>
-                            <option value="template">Template Message ( Deprecated )</option>
+                            <option value="list">Pesan List </option>
+                            <option value="button">Pesan Tombol ( Deprecated )</option>
+                            <option value="template">Pesan Template ( Deprecated )</option>
 
 
                         </select>
                         <div class="ajaxplace"></div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" name="submit" class="btn btn-primary">Add</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                    <button type="submit" name="submit" class="btn btn-primary">Tambah</button>
                     </form>
                 </div>
             </div>
@@ -240,7 +240,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Auto Reply Preview</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Preview pesan otomatis</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body showReply">
